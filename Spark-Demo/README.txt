@@ -47,11 +47,12 @@ All of the build & execution commands are organized in the Makefile.
 6) Pseudo-Distributed Hadoop: (https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/SingleCluster.html#Pseudo-Distributed_Operation)
 	make switch-pseudo			-- set pseudo-clustered Hadoop environment (execute once)
 	make pseudo					-- first execution
-	make pseudoq				-- later executions since namenode and datanode already running 
+	make pseudoq				-- later executions since namenode and datanode already running
 7) AWS EMR Hadoop: (you must configure the emr.* config parameters at top of Makefile)
 	make upload-input-aws		-- only before first execution
 	make aws					-- check for successful execution with web interface (aws.amazon.com)
 	download-output-aws			-- after successful execution & termination
 8) Download log file(create a log folder under current project folder first)
-aws s3 sync s3://your_bucket_name/log log
-
+   aws s3 sync s3://your_bucket_name/log log
+9) Running in IDE
+   configure the run configuration with input and output path, set the local master in VM option

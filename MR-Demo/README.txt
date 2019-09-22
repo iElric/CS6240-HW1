@@ -48,4 +48,6 @@ All of the build & execution commands are organized in the Makefile.
 	make aws					-- check for successful execution with web interface (aws.amazon.com)
 	download-output-aws			-- after successful execution & termination
 8) Download log file(create a log folder under current project folder first)
-	aws s3 sync s3://your_bucket_name/log log
+	 aws s3 sync s3://your_bucket_name/log log
+9) Running in IDE
+   configure the run configuration with input and output path
